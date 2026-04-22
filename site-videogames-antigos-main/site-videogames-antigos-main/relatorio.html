@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório do Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html">Videogames Clássicos</a>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="main-nav">
+      <a href="index.html">Início</a>
+      <a href="ps1.html">PS1</a>
+      <a href="snes.html">SNES</a>
+      <a href="genesis.html">Genesis</a>
+      <a href="gameboy.html">Game Boy</a>
+      <a href="relatorio.html">Relatório</a>
+    </nav>
+  </header>
+
+  <main class="report-page">
+    <section>
+      <h1>Relatório do Projeto</h1>
+      <p>Este site apresenta quatro videogames antigos e três jogos representativos de cada console. Ele foi construído com HTML, CSS e um pequeno script JavaScript para melhorar a navegação móvel.</p>
+    </section>
+
+    <section>
+      <h2>Arquivos do projeto</h2>
+      <ul>
+        <li><strong>index.html</strong> – página inicial com introdução, cards dos consoles e navegação principal.</li>
+        <li><strong>ps1.html</strong>, <strong>snes.html</strong>, <strong>genesis.html</strong>, <strong>gameboy.html</strong> – páginas de consoles, cada uma com três jogos, imagens e links para vídeos.</li>
+        <li><strong>style.css</strong> – define cores, tipografia, layout em grid, responsividade e estilos para cards, navegação e botões.</li>
+        <li><strong>main.js</strong> – controla o botão de menu no celular para abrir e fechar o menu de navegação.</li>
+        <li><strong>relatorio.html</strong> – documento que descreve a estrutura do site, as decisões de layout e a adaptação para diferentes telas.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Interligação e navegação</h2>
+      <p>O menu principal aparece em todas as páginas. Cada console tem um link direto na página inicial e as páginas de console possuem link de retorno para o início. Isso garante navegação clara entre os conteúdos.</p>
+    </section>
+
+    <section>
+      <h2>Tags HTML utilizadas</h2>
+      <p>Foram usadas tags semânticas como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code> e <code>&lt;footer&gt;</code>. Também há uso de <code>&lt;h1&gt;</code> a <code>&lt;h3&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code> e <code>&lt;button&gt;</code>.</p>
+    </section>
+
+    <section>
+      <h2>Decisões de leiaute</h2>
+      <p>O site usa um layout em grade para os cards na página inicial e um layout de lista com cards nas páginas de console. As páginas mantêm um estilo consistente com cabeçalho fixo e área principal clara.</p>
+    </section>
+
+    <section>
+      <h2>Adaptação para desktop e celular</h2>
+      <p>O CSS inclui breakpoints para ajustar o menu e os cards. Em telas largas, o menu é exibido horizontalmente e os cards aparecem em várias colunas. Em telas pequenas, o menu se torna oculto por padrão e pode ser aberto pelo botão de menu; os cards são empilhados em uma coluna para leitura mais fácil.</p>
+    </section>
+
+    <section>
+      <h2>Conclusão</h2>
+      <p>O site demonstra conhecimentos de HTML semântico, CSS de layout responsivo e navegação entre páginas, além de incorporar imagens e links de vídeo para enriquecer o conteúdo.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="index.html">Voltar ao início</a></p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
