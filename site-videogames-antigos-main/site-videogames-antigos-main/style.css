@@ -1,0 +1,285 @@
+﻿:root {
+  --bg: #0e1221;
+  --surface: #131a34;
+  --surface-soft: #1e2640;
+  --text: #edf2f7;
+  --muted: #a5b3c6;
+  --accent: #ffcc00;
+  --accent-strong: #ff9f1c;
+  --border: rgba(255,255,255,0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, rgba(255,204,0,0.12), transparent 35%), linear-gradient(180deg, #0b0f1c 0%, #0a0f1d 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.hero img {
+  border-radius: 1.5rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(14,18,33,0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.brand a {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+main {
+  width: min(1200px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(255,204,0,0.12), rgba(14,18,33,0.85));
+  border: 1px solid var(--border);
+  border-radius: 28px;
+}
+
+.hero h1 {
+  margin-top: 0;
+  font-size: clamp(2.2rem, 3vw, 3.4rem);
+  line-height: 1.05;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.intro {
+  margin: 3rem 0 2rem;
+}
+
+.intro h2 {
+  margin-bottom: 0.5rem;
+}
+
+.card-grid,
+.game-list {
+  display: grid;
+  gap: 1.8rem;
+}
+
+.card-grid {
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+}
+
+.card,
+.game-card {
+  background: rgba(21, 29, 49, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 22px 70px rgba(0,0,0,0.16);
+}
+
+.card img,
+.game-card figure img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background-color: black;
+}
+
+.card h3,
+.game-card h2 {
+  margin: 1rem;
+}
+
+.card p,
+.game-card p,
+.console-header p,
+.report-page p {
+  margin: 0 1rem 1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.card-link,
+.video-link {
+  display: inline-block;
+  margin: 0 1rem 1rem;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+
+.card-link:hover,
+.video-link:hover {
+  color: #ffe066;
+}
+
+.console-header,
+.report-page {
+  padding: 1.5rem 0;
+}
+
+.console-header h1,
+.report-page h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+.game-card {
+  padding-bottom: 1.5rem;
+}
+
+.genres {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  flex-wrap: wrap;
+}
+
+.genre {
+  background: var(--surface-soft);
+  color: var(--accent);
+  padding: 0.25rem 0.6rem;
+  border-radius: 1.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--accent);
+  box-shadow: 0 2px 8px rgba(255, 204, 0, 0.2);
+}
+
+.game-card figure {
+  margin: 0;
+}
+
+.game-card figcaption {
+  margin: 0.75rem 1rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.site-footer {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.site-footer a {
+  color: var(--accent);
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 0;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .card-grid,
+  .game-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header {
+    padding: 0.9rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .card,
+  .game-card {
+    border-radius: 18px;
+  }
+}
